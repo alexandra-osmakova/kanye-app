@@ -1,33 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 5vw;
+}
+
+.invisible_item {
+  display: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
+}
+
+.pic_holder {
+  width: 900px;
+  height: 80vh;
+  padding-top: 5vh;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.pic_holder::before,
+.pic_holder::after {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 5vw;
+  background-color: #595959;
+  position: absolute;
+}
+
+.pic_holder::before {
+  left: -9vw;
+  top: 45%;
+}
+
+.pic_holder::after {
+  right: -9vw;
+  top: 45%;
+}
+
+.pic_holder__content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10vh 3vw 0;
+}
+
+.pic_holder__content_item {
+  width: 50%;
+  margin: 0 auto;
+  padding: 5vh 3vw;
+  background-color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+q, p {
+  font-weight: bold;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+q {
+  quotes: "\201c" "\201d";
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: unset;
+  text-transform: uppercase;
+  font-weight: 20px;
+  color: #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pic_holder__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #404040;
+  opacity: 0.7;
 }
+
+.refresh_btn {
+  position: absolute;
+  bottom: 10vh;
+  right: 3vw;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 50px;
+}
+
+.current_kanye_pic_holder img {
+  width: 100%;
+}
+

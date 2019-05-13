@@ -1,0 +1,54 @@
+.menu_closed {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: #404040;
+    opacity: 0.9;
+}
+
+ul {    
+    display: flex;
+    justify-content: space-between;
+    padding: 15vh 15vw;
+}
+
+li {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 10px;
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
+}
+
+li:nth-of-type(1)::before {
+    content: '✏️';
+    position: absolute;
+    left: -50px;
+}
+
+li:nth-of-type(2)::before {
+    content: '🤩';
+    position: absolute;
+    left: -50px;
+}
+
+li:nth-of-type(3)::before {
+    content: '🌟';
+    position: absolute;
+    left: -50px;
+}
+
+li:nth-of-type(4)::before {
+    content: '🤓';
+    position: absolute;
+    left: -50px;
+}
