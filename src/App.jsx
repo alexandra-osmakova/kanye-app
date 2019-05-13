@@ -39,7 +39,7 @@ export class App extends React.Component {
         this.showNotKanyePic();
       });
     } else if(picsState === false) {
-      // this.getPics();
+      this.getPics();
       this.getQuote();
     }
   }
